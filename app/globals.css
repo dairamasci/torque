@@ -43,6 +43,20 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* PALETA TORQUE PERSONALIZADA */
+:root {
+  --torque-primary: #1e293b; /* Azul gris oscuro */
+  --torque-secondary: #a4b465; /* Verde oliva claro */
+  --torque-background: #f8fafc; /* Fondo base */
+  --torque-surface: #ffffff; /* Fondo de tarjetas / paper */
+  --torque-text-primary: #111827; /* Texto principal */
+  --torque-text-secondary: #374151; /* Texto secundario */
+  --torque-accent: #a4b465; /* Acento principal */
+  --torque-accent-hover: #8f9d52; /* Variante hover */
+  --torque-accent-light: #d0d9a0; /* Variante suave */
+}
+
+/* VARIABLES DE TEMA BASE (SHADCN) */
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -78,6 +92,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* MODO OSCURO */
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -110,8 +125,17 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Torque dark mode */
+  --torque-background: #111827;
+  --torque-surface: #1e293b;
+  --torque-text-primary: #f8fafc;
+  --torque-text-secondary: #e5e7eb;
+  --torque-accent: #a4b465;
+  --torque-accent-hover: #b1c174;
 }
 
+/* LAYER BASE */
 @layer base {
   * {
     @apply border-border outline-ring/50;

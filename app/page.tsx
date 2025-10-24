@@ -10,7 +10,7 @@ export default function Home() {
   ];
   return (
     <section className="space-y-6">
-      <header className="rounded-3xl border p-8">
+      <header className="rounded-3xl border p-8 shadow-lg ring-1 ring-black/5 dark:bg-neutral-900/30">
         <h1 className="text-3xl font-semibold">Bienvenido a Torque</h1>
         <p className="mt-2 text-sm opacity-80">
           Pantalla provisoria hasta definir el dashboard.
@@ -21,7 +21,7 @@ export default function Home() {
           <a
             key={l.href}
             href={l.href}
-            className="rounded-xl border p-4 hover:underline"
+            className="rounded-xl border p-4 hover:underline shadow-lg ring-1 ring-black/5 dark:bg-neutral-900/30"
           >
             <div className="text-lg font-semibold">{l.label}</div>
             <div className="text-sm opacity-80">Ir a {l.label}</div>
