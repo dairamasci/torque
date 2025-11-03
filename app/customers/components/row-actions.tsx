@@ -6,9 +6,8 @@ import {
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from '@radix-ui/react-dropdown-menu';
-
-import { MoreHorizontal, Pencil, Trash2 } from 'lucide-react';
+} from '@/components/ui/dropdown-menu';
+import { Eye, MoreHorizontal, Pencil, Trash2 } from 'lucide-react';
 
 export function RowActions() {
   return (
@@ -25,32 +24,43 @@ export function RowActions() {
         align="start"
         sideOffset={4}
         className="
-          w-auto min-w-0 max-w-max 
-          bg-card text-card-foreground
-          border border-border 
-          rounded-md shadow-md p-2"
+            w-auto min-w-0 max-w-max 
+            bg-card text-card-foreground
+            border border-border 
+            rounded-md shadow-md p-2"
       >
         <DropdownMenuItem
           className="
-            w-auto flex flex-row items-center 
-            rounded-sm px-2 py-1.5 cursor-pointer 
-            hover:bg-accent hover:text-accent-foreground 
-            transition-colors"
-          onClick={() => console.log('Edit')}
+              w-auto flex flex-row items-center 
+              rounded-sm px-2 py-1.5 cursor-pointer 
+              hover:bg-[var(--torque-accent-hover)]/10 hover:text-accent-foreground 
+              transition-colors"
+          onClick={() => console.log('View Details')}
         >
-          <Pencil className="mr-2 h-4 w-4" />
-          Edit
+          <Eye className="mr-2 h-4 w-4" />
+          Ver detalles
         </DropdownMenuItem>
         <DropdownMenuItem
           className="
-          w-auto flex flex-row items-center 
-          rounded-sm px-2 py-1.5 text-destructive 
-          focus:bg-destructive/10 focus:text-destructive 
-          cursor-pointer"
+              w-auto flex flex-row items-center 
+              rounded-sm px-2 py-1.5 cursor-pointer 
+              hover:bg-[var(--torque-accent-hover)]/10 hover:text-accent-foreground 
+              transition-colors"
+          onClick={() => console.log('Edit')}
+        >
+          <Pencil className="mr-2 h-4 w-4" />
+          Editar
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          className="
+            w-auto flex flex-row items-center 
+            rounded-sm px-2 py-1.5 text-destructive 
+            focus:bg-destructive/10 focus:text-destructive 
+            cursor-pointer"
           onClick={() => console.log('Delete')}
         >
           <Trash2 className="mr-2 h-4 w-4" />
-          Delete
+          Eliminar
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -45,15 +45,15 @@
 
 /* PALETA TORQUE PERSONALIZADA */
 :root {
-  --torque-primary: #1e293b; /* Azul gris oscuro */
-  --torque-secondary: #a4b465; /* Verde oliva claro */
-  --torque-background: #f8fafc; /* Fondo base */
-  --torque-surface: #ffffff; /* Fondo de tarjetas / paper */
-  --torque-text-primary: #111827; /* Texto principal */
-  --torque-text-secondary: #374151; /* Texto secundario */
-  --torque-accent: #a4b465; /* Acento principal */
-  --torque-accent-hover: #8f9d52; /* Variante hover */
-  --torque-accent-light: #d0d9a0; /* Variante suave */
+  --torque-primary: #1e293b;
+  --torque-secondary: #a4b465;
+  --torque-background: #f8fafc;
+  --torque-surface: #ffffff;
+  --torque-text-primary: #111827;
+  --torque-text-secondary: #374151;
+  --torque-accent: #a4b465;
+  --torque-accent-hover: #8f9d52;
+  --torque-accent-light: #d0d9a0;
 }
 
 /* VARIABLES DE TEMA BASE (SHADCN) */
