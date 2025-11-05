@@ -10,7 +10,6 @@ export default function CustomersPage() {
     <section className="space-y-4 flex flex-col">
       <h1 className="text-3xl font-semibold">Clientes</h1>
       <div className="flex flex-col gap-3">
-        <NewCustomer />
         <CustomersTable />
       </div>
     </section>

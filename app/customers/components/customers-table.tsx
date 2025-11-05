@@ -2,6 +2,8 @@
 
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { RowActions } from './row-actions';
+import { Input } from '@/components/ui/input';
+import { NewCustomer } from './new-customer';
 
 type Row = {
   name: string;
@@ -13,7 +15,7 @@ type Row = {
   createdAt: Date;
 };
 
-const rows: Row[] = [
+const data: Row[] = [
   {
     name: 'Dwayne',
     surname: 'Johnson',
@@ -54,35 +56,41 @@ const rows: Row[] = [
 
 export const CustomersTable = () => {
   return (
-    <Table>
-      <TableCaption>Aquí ves listados los clientes registrados en el sistema.</TableCaption>
-      <TableHeader>
-        <TableRow>
-          <TableHead>Nombre y apellido</TableHead>
-          <TableHead>Teléfono</TableHead>
-          <TableHead>Dirección</TableHead>
-          <TableHead>Email</TableHead>
-          <TableHead>Vehículos asignados</TableHead>
-          <TableHead>Fecha de alta</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody className="max-h-[20px]">
-        {rows.map((row) => (
-          <TableRow key={row.name} className="hover:bg-[var(--torque-accent-hover)]/10">
-            <TableCell>
-              {row.name} {row.surname}
-            </TableCell>
-            <TableCell>{row.telephone}</TableCell>
-            <TableCell>{row.address}</TableCell>
-            <TableCell>{row.email ?? '-'}</TableCell>
-            <TableCell>{row.vehiclesBrands.join(', ')}</TableCell>
-            <TableCell>{row.createdAt.toLocaleDateString('es-ES')}</TableCell>
-            <TableCell>
-              <RowActions />
-            </TableCell>
+    <>
+      <div className="flex gap-4 items-center justify-end mb-4">
+        <Input placeholder="Filtrar por nombre..." value={''} onChange={() => {}} className="max-w-sm" />
+        <NewCustomer />
+      </div>
+      <Table>
+        <TableCaption>Aquí ves listados los clientes registrados en el sistema.</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Nombre y apellido</TableHead>
+            <TableHead>Teléfono</TableHead>
+            <TableHead>Dirección</TableHead>
+            <TableHead>Email</TableHead>
+            <TableHead>Vehículos asignados</TableHead>
+            <TableHead>Fecha de alta</TableHead>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHeader>
+        <TableBody className="max-h-[20px]">
+          {data.map((row) => (
+            <TableRow key={row.name} className="hover:bg-[var(--torque-accent-hover)]/10">
+              <TableCell>
+                {row.name} {row.surname}
+              </TableCell>
+              <TableCell>{row.telephone}</TableCell>
+              <TableCell>{row.address}</TableCell>
+              <TableCell>{row.email ?? '-'}</TableCell>
+              <TableCell>{row.vehiclesBrands.join(', ')}</TableCell>
+              <TableCell>{row.createdAt.toLocaleDateString('es-ES')}</TableCell>
+              <TableCell>
+                <RowActions />
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </>
   );
 };
