@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
 import './globals.css';
+import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import { AnimatedBackground } from '@/components/animated-background';
 import { GlobalKeyframes } from '@/components/global-keyframes';

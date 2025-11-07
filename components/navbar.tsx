@@ -35,14 +35,6 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* <div className="hidden gap-6 text-sm md:flex ">
-            <Link href="/customers">Clientes</Link>
-            <Link href="/vehicles">Vehículos</Link>
-            <Link href="/visits">Visitas</Link>
-            <Link href="/appointments">Citas</Link>
-            <Link href="/appointments/calendar">Calendario</Link>
-          </div> */}
-
           <div className="hidden gap-6 text-sm md:flex">
             {links.map((link) => {
               const isActive = pathname === link.href;
