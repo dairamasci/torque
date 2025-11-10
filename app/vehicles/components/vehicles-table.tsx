@@ -70,7 +70,7 @@ export const VehiclesTable = ({ onSelectVehicle }: VehiclesTableProps) => {
         />
         <NewVehicle />
       </div>
-      <Card className="relative px-8 shadow-lg ring-1 ring-black/5 dark:bg-neutral-900/30">
+      <Card className="relative px-8">
         <Table>
           <TableCaption>Aquí ves listados los vehículos registrados en el sistema.</TableCaption>
           <TableHeader>
@@ -87,7 +87,7 @@ export const VehiclesTable = ({ onSelectVehicle }: VehiclesTableProps) => {
           </TableHeader>
           <TableBody className="max-h-[20px]">
             {data.map((row) => (
-              <TableRow key={row.plate} className="hover:bg-[var(--torque-accent-hover)]/10">
+              <TableRow key={row.plate} className="hover:bg-[var(--foreground)]/10">
                 <TableCell>{row.brand}</TableCell>
                 <TableCell>{row.model}</TableCell>
                 <TableCell>{row.manufactureYear}</TableCell>
