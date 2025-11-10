@@ -1,6 +1,6 @@
 'use client';
 import { CustomersTable } from './components/customers-table';
-import { NewCustomer } from './components/new-customer';
+
 // - Crear clientes nuevos
 // - Modificar y eliminar clientes
 // - Listar clientes

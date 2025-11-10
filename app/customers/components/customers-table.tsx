@@ -4,6 +4,7 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { RowActions } from './row-actions';
 import { Input } from '@/components/ui/input';
 import { NewCustomer } from './new-customer';
+import { Card } from '@/components/ui/card';
 
 type Row = {
   name: string;
