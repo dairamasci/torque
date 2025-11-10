@@ -61,36 +61,39 @@ export const CustomersTable = () => {
         <Input placeholder="Filtrar por nombre..." value={''} onChange={() => {}} className="max-w-sm" />
         <NewCustomer />
       </div>
-      <Table>
-        <TableCaption>Aquí ves listados los clientes registrados en el sistema.</TableCaption>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Nombre y apellido</TableHead>
-            <TableHead>Teléfono</TableHead>
-            <TableHead>Dirección</TableHead>
-            <TableHead>Email</TableHead>
-            <TableHead>Vehículos asignados</TableHead>
-            <TableHead>Fecha de alta</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody className="max-h-[20px]">
-          {data.map((row) => (
-            <TableRow key={row.name} className="hover:bg-[var(--torque-accent-hover)]/10">
-              <TableCell>
-                {row.name} {row.surname}
-              </TableCell>
-              <TableCell>{row.telephone}</TableCell>
-              <TableCell>{row.address}</TableCell>
-              <TableCell>{row.email ?? '-'}</TableCell>
-              <TableCell>{row.vehiclesBrands.join(', ')}</TableCell>
-              <TableCell>{row.createdAt.toLocaleDateString('es-ES')}</TableCell>
-              <TableCell>
-                <RowActions />
-              </TableCell>
+      <Card className="relative px-8 shadow-lg ring-1 ring-black/5 dark:bg-neutral-900/30">
+        <Table>
+          <TableCaption>Aquí ves listados los clientes registrados en el sistema.</TableCaption>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Nombre y apellido</TableHead>
+              <TableHead>Teléfono</TableHead>
+              <TableHead>Dirección</TableHead>
+              <TableHead>Email</TableHead>
+              <TableHead>Vehículos asignados</TableHead>
+              <TableHead>Fecha de alta</TableHead>
+              <TableHead></TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody className="max-h-[20px]">
+            {data.map((row) => (
+              <TableRow key={row.name} className="hover:bg-[var(--foreground)]/10">
+                <TableCell>
+                  {row.name} {row.surname}
+                </TableCell>
+                <TableCell>{row.telephone}</TableCell>
+                <TableCell>{row.address}</TableCell>
+                <TableCell>{row.email ?? '-'}</TableCell>
+                <TableCell>{row.vehiclesBrands.join(', ')}</TableCell>
+                <TableCell>{row.createdAt.toLocaleDateString('es-ES')}</TableCell>
+                <TableCell>
+                  <RowActions />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Card>
     </>
   );
 };
