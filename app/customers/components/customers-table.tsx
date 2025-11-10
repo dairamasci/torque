@@ -78,7 +78,7 @@ export const CustomersTable = () => {
           </TableHeader>
           <TableBody className="max-h-[20px]">
             {data.map((row) => (
-              <TableRow key={row.name} className="hover:bg-[var(--torque-accent-hover)]/10">
+              <TableRow key={row.name} className="hover:bg-[var(--foreground)]/10">
                 <TableCell>
                   {row.name} {row.surname}
                 </TableCell>
