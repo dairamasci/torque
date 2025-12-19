@@ -78,6 +78,7 @@ export const VehiclesTable = ({ onSelectVehicle }: VehiclesTableProps) => {
               <TableHead>Marca</TableHead>
               <TableHead>Modelo</TableHead>
               <TableHead>Año</TableHead>
+              <TableHead>Kilometraje</TableHead>
               <TableHead>Cliente</TableHead>
               <TableHead>Patente</TableHead>
               <TableHead>Última visita</TableHead>
@@ -91,6 +92,7 @@ export const VehiclesTable = ({ onSelectVehicle }: VehiclesTableProps) => {
                 <TableCell>{row.brand}</TableCell>
                 <TableCell>{row.model}</TableCell>
                 <TableCell>{row.manufactureYear}</TableCell>
+                <TableCell>{row.kmLastVisit}</TableCell>
                 <TableCell>{row.clientName}</TableCell>
                 <TableCell>{row.plate}</TableCell>
                 <TableCell>{row.dateLastVisit?.toLocaleDateString('es-ES') ?? '-'}</TableCell>

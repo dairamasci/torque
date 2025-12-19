@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { VehiclesTable } from './components/vehicles-table';
 import { LastVisitCard } from './components/last-visit-card';
 
-export default function VehiclesGlobalPage() {
+export default function VehiclesPage() {
   const [selectedVehicle, setSelectedVehicle] = useState<string | null>(null);
 
   return (
